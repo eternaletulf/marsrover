@@ -79,5 +79,79 @@ public class RoverTest {
 
         assertThat(rover.getOrientation(), is('W'));
     }
-}
 
+    @Test
+    public void whenFacingNTurnLeftTwiceShouldEndFacingS() {
+        Rover rover = new Rover(ANY_X, ANY_Y, 'N');
+
+        rover.left();
+        rover.left();
+
+        assertThat(rover.getOrientation(), is('S'));
+    }
+
+    @Test
+    public void whenFacingNTurnLeftx3ShouldEndFacingE() {
+        Rover rover = new Rover(ANY_X, ANY_Y, 'N');
+
+        rover.left();
+        rover.left();
+        rover.left();
+
+        assertThat(rover.getOrientation(), is('E'));
+    }
+
+    @Test
+    public void whenFacingNTurnLeftx4ShouldEndFacingN() {
+        Rover rover = new Rover(ANY_X, ANY_Y, 'N');
+
+        rover.left();
+        rover.left();
+        rover.left();
+        rover.left();
+
+        assertThat(rover.getOrientation(), is('N'));
+    }
+
+    @Test
+    public void whenFacingNTurnRightShouldEndFacingE() {
+        Rover rover = new Rover(ANY_X, ANY_Y, 'N');
+
+        rover.right();
+
+        assertThat(rover.getOrientation(), is('E'));
+    }
+
+    @Test
+    public void whenFacingNTurnRightTwiceShouldEndFacingS() {
+        Rover rover = new Rover(ANY_X, ANY_Y, 'N');
+
+        rover.right();
+        rover.right();
+
+        assertThat(rover.getOrientation(), is('S'));
+    }
+
+    @Test
+    public void whenFacingNTurnRightX3ShouldEndFacingW() {
+        Rover rover = new Rover(ANY_X, ANY_Y, 'N');
+
+        rover.right();
+        rover.right();
+        rover.right();
+
+        assertThat(rover.getOrientation(), is('W'));
+    }
+
+    @Test
+    public void whenFacingNTurnRightX4ShouldEndFacingN() {
+        Rover rover = new Rover(ANY_X, ANY_Y, 'N');
+
+        rover.right();
+        rover.right();
+        rover.right();
+        rover.right();
+
+        assertThat(rover.getOrientation(), is('N'));
+    }
+}
