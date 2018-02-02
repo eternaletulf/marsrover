@@ -31,4 +31,8 @@ public class Rover {
     public char getOrientation() {
         return orientation;
     }
+
+    public void left() {
+        orientation = 'W';
+    }
 }
