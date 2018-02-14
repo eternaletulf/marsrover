@@ -31,36 +31,6 @@ public class RoverTest {
         assertThat(rover.getOrientation(), is(SOUTH));
     }
 
-    @Test(expected = InvalidCoordinateException.class)
-    public void shouldFailWhenXAxisNegative() {
-        new Rover(-4, 5, ANY_ORIENTATION);
-    }
-
-    @Test(expected = InvalidCoordinateException.class)
-    public void shouldFailWhenYAxisNegative() {
-        new Rover(4, -5, ANY_ORIENTATION);
-    }
-
-    @Test(expected = InvalidCoordinateException.class)
-    public void shouldFailWhenBothAxisAreNegative() {
-        new Rover(-9, -8, ANY_ORIENTATION);
-    }
-
-    @Test(expected = InvalidCoordinateException.class)
-    public void shouldFailWhenXAxisZero() {
-        new Rover(0, 2, ANY_ORIENTATION);
-    }
-
-    @Test(expected = InvalidCoordinateException.class)
-    public void shouldFailWhenYAxisZero() {
-        new Rover(3, 0, ANY_ORIENTATION);
-    }
-
-    @Test(expected = InvalidCoordinateException.class)
-    public void shouldFailWhenBothAxisAreZero() {
-        new Rover(0, 0, ANY_ORIENTATION);
-    }
-
     @Test(expected = InvalidOrientationException.class)
     public void shouldFailIfOrientationIsInvalidCharL() {
         new Rover(ANY_X, ANY_Y, 'L');

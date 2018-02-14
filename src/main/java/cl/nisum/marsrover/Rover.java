@@ -11,8 +11,6 @@ public class Rover {
     private static final List<Character> CARDINAL_POINTS = Arrays.asList('N', 'W', 'S', 'E');
 
     public Rover(int x, int y, char orientation) {
-        if (x <= 0) throw new InvalidCoordinateException();
-        if (y <= 0) throw new InvalidCoordinateException();
         if (!CARDINAL_POINTS.contains(orientation)) throw new InvalidOrientationException();
 
         this.x = x;
